@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #000;
+}
+.videoBottom{
+    background: #fff;
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    padding:  10px 30px;
+}
+
+.videoBottom i{
+    padding: 5px 10px;
+    display: inline-block;
+    margin: 10px;
+    transition: 0.3s ease-in-out;
+}
+.videoBottom i:hover{
+    color: rgb(255, 0, 0);
+}
+
+.videoBottom #exitCall{
+    background: red;
+    border-radius: 30px;
+}
+.videoBottom #exitCall i:hover{
+    color: rgb(255, 255, 255);
+}
+
+.videoTop{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: gray;
+    width: 250px;
+}
+
+.videoTop i{
+    padding: 20px;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+.videoTop i:hover{
+    color: red;
+}
