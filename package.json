@@ -1,0 +1,22 @@
+{
+  "name": "javascript-zoom",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js google meet",
+    "meet",
+    "zoom"
+  ],
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.4.0"
+  },
+  "author": "Iftekhar Hossen",
+  "license": "ISC",
+  "description": ""
+}

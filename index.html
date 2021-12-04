@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Join Meeting</title>
+</head>
+
+<body>
+
+    <main class="container-fluid homePage d-flex flex-column">
+        <div class="videoContainer">
+            <div class="video-remote">
+                <div class="call">
+                    <div class="video">
+                        <div id="mySelf" class="userBox display-center flex-column">
+                            <h1 class="display-center">Iftekhar Hossen</h1>
+                            <div class="display-center">
+                                <video autoplay muted id="localVideo"></video>
+                            </div>
+                        </div>
+                        <div class="otherMembers" class="userBox display-center flex-column d-none">
+                            <video autoplay muted></video>
+                            <audio autoplay muted controls class="d-none"></audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="videoTop d-flex">
+            <div class="participent courso-pointer bottomeLeft">
+                <i class="fa-solid fa-users"></i>
+            </div>
+            <div class="comment courso-pointer bottomeLeft">
+                <i class="fa-solid fa-comment"></i>
+            </div>
+        </div>
+        <div class="videoBottom d-flex justify-content-between">
+            <div class="videoBottomLeft d-flex">
+                <div class="meetingDetails courso-pointer bottomeLeft">
+                   Meeting Details <i class="fa-solid fa-angle-up"></i>
+                </div>
+            </div>
+            <div class="videoBottomCenter d-flex">
+                <div id="micOnOff" class="courso-pointer bottomeLeft">
+                    <i class="fa-solid fa-microphone-slash"></i>
+                </div>
+                <div id="exitCall" class="courso-pointer bottomeLeft">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <div id="videoOnOff" class="courso-pointer bottomeLeft">
+                    <i class="fa-solid fa-video-slash"></i>
+                </div>
+            </div>
+            <div class="videoBottomRight d-flex">
+                <div id="share" class="courso-pointer bottomeLeft">
+                    <i class="fa-solid fa-share"></i>
+                </div>
+                <div id="moreFun" class="courso-pointer bottomeLeft">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.socket.io/4.4.0/socket.io.min.js"></script>
+    <script src="js/script.js"></script>
+
+
+    <script>
+        let url = new URLSearchParams(window.loaction).get("meetingId")
+        let meetingId = url
+        let userId = prompt("Enter your Name of Meeting Id")
+
+        if( !userId & !meetingId){
+            alert("Userid or meeting id is missing")
+        }
+        myVideo.init(userId, meetingId)
+    </script>
+
+</body>
+
+</html>
